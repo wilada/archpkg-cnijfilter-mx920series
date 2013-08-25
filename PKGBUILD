@@ -36,9 +36,9 @@ package() {
   chown root usr/lib/bjlib/cnnet.ini
   chgrp root usr/lib/bjlib/cnnet.ini
 
-  chmod 0755 usr/bin
-  chmod -R 0755 usr/lib
-  chmod -R 0644 usr/share
-  chmod -R 0644 etc
+  chmod 0755 $(find usr/bin -type f)
+  chmod 0755 $(find usr/lib -type f)
+  chmod 0644 $(find usr/share -type f)
+  chmod 0644 $(find etc -type f)
 }
 
